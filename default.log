@@ -69,3 +69,56 @@ INFO 2026-03-26 18:05:02,347 : 最大延迟:342.256ms,最小延迟:321.114ms,平
 INFO 2026-03-26 18:05:02,348 : 预期运行时间:[无限], 实际运行时间:[49.99秒]
 INFO 2026-03-26 18:05:02,348 : 总运行次数:[8], 测试成功次数:[8], 测试失败次数:[0]
 WARNING 2026-03-26 18:05:03,362 : 倒计时: 1 秒
+INFO 2026-03-26 18:07:19,237 : 未指定网卡，使用默认网卡
+WARNING 2026-03-26 18:07:19,406 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:07:23,865 : 延迟测试，平均延迟: 328.265 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:07:37,954 : 延迟测试，平均延迟: 440.004 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:07:43,020 : 延迟测试，平均延迟: 326.633 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:07:48,075 : 延迟测试，平均延迟: 321.865 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:07:53,145 : 延迟测试，平均延迟: 320.865 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:07:57,490 : 延迟测试，平均延迟: 325.579 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:08:02,521 : 延迟测试，平均延迟: 322.926 ms, 目标: 8.8.8.8
+WARNING 2026-03-26 18:08:16,608 : Ping 8.8.8.8 失败!!!
+INFO 2026-03-26 18:08:21,658 : 延迟测试，平均延迟: 348.754 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:08:26,712 : 延迟测试，平均延迟: 319.654 ms, 目标: 8.8.8.8
+INFO 2026-03-26 18:08:31,768 : 延迟测试，平均延迟: 335.912 ms, 目标: 8.8.8.8
+CRITICAL 2026-03-26 18:08:36,825 : 主动关闭信号已捕捉开始关闭程序
+CRITICAL 2026-03-26 18:08:36,827 : 用户手动中断测试,执行中的测试数据未进行回收
+WARNING 2026-03-26 18:08:36,827 : 程序强制关闭倒计时,倒计时3秒
+INFO 2026-03-26 18:08:36,827 : 延迟测试，平均延迟: 376.686 ms, 目标: 8.8.8.8
+WARNING 2026-03-26 18:08:36,828 : 倒计时: 3 秒
+WARNING 2026-03-26 18:08:37,839 : 倒计时: 2 秒
+INFO 2026-03-26 18:08:37,839 : 最大延迟:440.004ms,最小延迟:319.654ms,平均延迟:342.47ms,丢包率为:8.33%
+INFO 2026-03-26 18:08:37,841 : 预期运行时间:[无限], 实际运行时间:[1.0分18.60秒]
+INFO 2026-03-26 18:08:37,841 : 总运行次数:[12], 测试成功次数:[11], 测试失败次数:[1]
+WARNING 2026-03-26 18:08:38,854 : 倒计时: 1 秒
+WARNING 2026-03-26 18:15:05,094 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:15:05,612 : 测试ls命令，结果：SSHCommandResult(stdout='bin\ncode\nDesktop\nDocuments\nDownloads\nMusic\nPictures\nPublic\nsnap\nSoft\nTemplates\ntest.txt\nVideos\nwork', stderr='', returncode=0)
+WARNING 2026-03-26 18:16:45,848 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:16:46,335 : 测试ls -l命令，结果：SSHCommandResult(stdout='总用量 56\ndrwxrwxr-x 2 work work 4096 5月   8  2023 bin\ndrwxrwxr-x 3 work work 4096 3月  20 09:55 code\ndrwxr-xr-x 2 work work 4096 3月  20 09:58 Desktop\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Documents\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Downloads\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Music\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Pictures\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Public\ndrwx------ 5 work work 4096 8月  22  2025 snap\ndrwxrwxr-x 3 work work 4096 8月  22  2025 Soft\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Templates\n-rw-rw-r-- 1 work work   19 3月  26 15:37 test.txt\ndrwxr-xr-x 2 work work 4096 5月   6  2023 Videos\ndrwxrwxr-x 3 work work 4096 8月  22  2025 work', stderr='', returncode=0)
+WARNING 2026-03-26 18:17:38,666 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:17:39,164 : 测试cat test.txt命令，结果：SSHCommandResult(stdout='this remote windows', stderr='', returncode=0)
+WARNING 2026-03-26 18:18:51,533 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:18:51,971 : 命令: cat test.txt
+INFO 2026-03-26 18:18:51,972 : 状态: ✅ 成功 (返回码: 0)
+INFO 2026-03-26 18:18:51,972 : 输出:
+this remote windows
+WARNING 2026-03-26 18:19:11,093 : 当前ssh未连接执行时连接,连接设备:[192.168.229.200]
+INFO 2026-03-26 18:19:11,501 : 命令: ls -l
+INFO 2026-03-26 18:19:11,501 : 状态: ✅ 成功 (返回码: 0)
+INFO 2026-03-26 18:19:11,501 : 输出:
+总用量 56
+drwxrwxr-x 2 work work 4096 5月   8  2023 bin
+drwxrwxr-x 3 work work 4096 3月  20 09:55 code
+drwxr-xr-x 2 work work 4096 3月  20 09:58 Desktop
+drwxr-xr-x 2 work work 4096 5月   6  2023 Documents
+drwxr-xr-x 2 work work 4096 5月   6  2023 Downloads
+drwxr-xr-x 2 work work 4096 5月   6  2023 Music
+drwxr-xr-x 2 work work 4096 5月   6  2023 Pictures
+drwxr-xr-x 2 work work 4096 5月   6  2023 Public
+drwx------ 5 work work 4096 8月  22  2025 snap
+drwxrwxr-x 3 work work 4096 8月  22  2025 Soft
+drwxr-xr-x 2 work work 4096 5月   6  2023 Templates
+-rw-rw-r-- 1 work work   19 3月  26 15:37 test.txt
+drwxr-xr-x 2 work work 4096 5月   6  2023 Videos
+drwxrwxr-x 3 work work 4096 8月  22  2025 work
