@@ -4,9 +4,6 @@ import argparse
 import re
 import sys
 from time import sleep, time
-
-from ping3 import ping
-
 from scripts.abstract import abstract
 
 
@@ -15,10 +12,10 @@ class PingTest(abstract):
     def __init__(self):
         super().__init__()
         self.config_init(
-            "LatencyTest.ping_host:测试目标IP地址",
-            "LatencyTest.interval:测试延迟每一跳间隔时间，单位秒仅支持整数",
-            "LatencyTest.interface:指定测试网卡，不设置或无此项默认使用默认网卡",
-            "LatencyTest.duration:自动化脚本运行时间，不设置或无此项默认无限，支持单位：周w、天d、小时h、分m、秒s，不区分大小写示例: 10S 为运行十秒",
+            "PingTest.ping_host:测试目标IP地址",
+            "PingTest.interval:测试延迟每一跳间隔时间，单位秒仅支持整数",
+            "PingTest.interface:指定测试网卡，不设置或无此项默认使用默认网卡",
+            "PingTest.duration:自动化脚本运行时间，不设置或无此项默认无限，支持单位：周w、天d、小时h、分m、秒s，不区分大小写示例: 10S 为运行十秒",
             PingTest={
                 "ping_host": "",
                 "interval": "1",
@@ -28,7 +25,7 @@ class PingTest(abstract):
         )
         runtime_config = self.load_config("PingTest") or {}
         self.duration = runtime_config.get("duration", None)
-        self.interval = int(runtime_config.get("interval", 1))
+        self.interval = float(runtime_config.get("interval", 1))
         self.interface = runtime_config.get("interface", "")
         self._ping_host = runtime_config.get("ping_host", "")
 
@@ -48,9 +45,10 @@ class PingTest(abstract):
             raise ValueError("未设置测试目标IP地址")
         
         while self.isrunning:
-            result = self.execute(f"ping -c 4 {self._ping_host}")
+            cmd = f"ping -c 4 {self._ping_host}" + (f" -I {self.interface}" if self.interface else "")
+            result = self.execute(cmd)
             if result and result.returncode == 0:
-                match = re.search(r'rtt min/avg/max/mdev = (\d+\.?\d*)/(\d+\.?\d*)/(\d+\.?\d*)/', result.stdout)
+                match = re.search(r'rtt min/avg/max/mdev = ([\d\.]+)/([\d\.]+)/([\d\.]+)/', result.stdout)
                 if match:
                     avg_delay = float(match.group(2))
                     self.log_info(f"延迟测试，平均延迟: {avg_delay} ms, 目标: {self._ping_host}")

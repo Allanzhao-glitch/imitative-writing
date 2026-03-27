@@ -1,1 +1,6 @@
 default.log
+*.pyc
+scripts/__pycache__/abstract.cpython-310.pyc
+scripts/communication_devices/__pycache__/ping_test.cpython-310.pyc
+scripts/communication_devices/__pycache__/test.cpython-310.pyc
+scripts/communication_devices/__pycache__/test_ping.cpython-310.pyc
